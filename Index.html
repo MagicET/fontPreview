@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>フォントプレビュー(日誌用)</title>
+    <style>
+        @font-face{
+            font-family:'new-gen';
+            src: url("./NEW-GENERATION.ttf");
+        }
+        #textPreview {font-family:'new-gen';font-size: xx-large;}
+    </style>
+</head>
+<body>
+    <h1>Font by E.T. with IcoMoon</h1>
+    <a href=./NEW-GENERATION.ttf download="自作フォント.ttf">フォントのダウンロード</a>
+    <p id='textPreview'>あああ</p>
+    <input id='textBox' type="text" name="textBox" size="30" placeholder="文字を入力してください" value="Example Text">
+    <script type="text/javascript">
+        const textPreview = document.getElementById('textPreview');
+        const textBox = document.getElementById('textBox');
+        function textHyouji(){
+           textPreview.innerHTML = "<p>"+textBox.value+"</p>"; 
+        }
+        const textHyoujiFunc = () => {
+            textHyouji();
+        }
+        setInterval(textHyoujiFunc, 1);
+    </script>
+
