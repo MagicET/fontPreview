@@ -9,21 +9,38 @@
             font-family:'new-gen';
             src: url("./NEW-GENERATION.ttf");
         }
-        #textPreview {font-family:'new-gen';font-size: xx-large;}
+        @font-face{
+            font-family:'cyber-mono';
+            src: url("./Cyber-Mono.ttf");
+        }
+        #1textPreview {font-family:'new-gen';font-size: xx-large;}
+        #2textPreview {font-family:'cyber-mono';font-size: xx-large;}
     </style>
 </head>
 <body>
     <h1>Font by E.T. with IcoMoon</h1>
-    <p>MyCompassに書いたフォントです。名前はNEW=GENERATIONです。下のテキストボックスに文字を入力して文字を見てみてください。</p>
-    <p>対応している文字:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!?,."'()[]{}:;/\_#+-=~|@<>*</p>
-    <a href=./NEW-GENERATION.ttf download="自作フォント.ttf">フォントのダウンロード</a>
-    <p id='textPreview'>あああ</p>
-    <input id='textBox' type="text" name="textBox" size="30" placeholder="文字を入力してください" value="Example Text">
+    <p>テキストボックスに文字を入力してください Please enter characters in the text box</p>
+    <h3>NEW-GENERATION</h3>
+    <p>対応している文字 Corresponding characters:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!?,."'()[]{}:;/\_#+-=~|@<>*</p>
+    <a href=./NEW-GENERATION.ttf download="NEW-GENERATION(By MagicET).ttf">フォントのダウンロード Download link</a>
+    <p id='1textPreview'>文字プレビュー</p>
+    <input id='1textBox' type="text" name="textBox" size="30" placeholder="文字を入力してください" value="Example Text">
+    
+    <h3>Cyber-Mono</h3>
+    <p>対応している文字 Corresponding characters:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!?,."'()[]{}:;/\_#+-=|@<>*&</p>
+    <a href=./Cyber-Mono.ttf download="Cyber-Mono(By MagicET).ttf">フォントのダウンロード Download link</a>
+    <p id='2textPreview'>文字プレビュー</p>
+    <input id='2textBox' type="text" name="textBox" size="30" placeholder="文字を入力してください" value="Example Text">
     <script type="text/javascript">
-        const textPreview = document.getElementById('textPreview');
-        const textBox = document.getElementById('textBox');
+        const 1textPreview = document.getElementById('1textPreview');
+        const 1textBox = document.getElementById('1textBox');
+        const 2textPreview = document.getElementById('2textPreview');
+        const 2textBox = document.getElementById('2textBox');
         function textHyouji(){
-           textPreview.innerHTML = "<p>"+textBox.value+"</p>"; 
+           1textPreview.innerHTML = "<p>"+1textBox.value+"</p>"; 
+        }
+        function textHyouji(){
+           2textPreview.innerHTML = "<p>"+2textBox.value+"</p>"; 
         }
         const textHyoujiFunc = () => {
             textHyouji();
