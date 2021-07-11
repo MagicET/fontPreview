@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <title>フォントプレビュー(日誌用)</title>
     
-    //CSS
+    <!-- CSS -->
     <style>
         @font-face{
             font-family:'new-gen';
@@ -21,22 +21,22 @@
 </head>
 <body>
     
-    //HTML
+    <!-- HTML -->
     <h1>Font by E.T. with IcoMoon</h1>
     <p>テキストボックスに文字を入力してください Please enter characters in the text box</p>
-    <h3>NEW-GENERATION</h3>
+    <h2>NEW-GENERATION</h2>
     <p>対応している文字 Corresponding characters:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!?,."'()[]{}:;/\_#+-=~|@<>*</p>
     <a href=./NEW-GENERATION.ttf download="NEW-GENERATION(By MagicET).ttf">フォントのダウンロード Download link</a>
     <p id='new-gen_textPreview'>TextPreview</p>
     <input id='new-gen_textBox' type="text" name="new-gen_textBox" size="30" placeholder="文字を入力してください" value="Example Text">
     
-    <h3>Cyber-Mono</h3>
+    <h2>Cyber-Mono</h2>
     <p>対応している文字 Corresponding characters:ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890!?,."'()[]{}:;/\_#+-=|@<>*&</p>
     <a href=./Cyber-Mono.ttf download="Cyber-Mono(By MagicET).ttf">フォントのダウンロード Download link</a>
     <p id='cyber-mono_textPreview'>TextPreview</p>
     <input id='cyber-mono_textBox' type="text" name="cyber-mono_textBox" size="30" placeholder="文字を入力してください" value="Example Text">
     
-    //JavaScript
+    <!-- JavaScript -->
     <script type="text/javascript">
         function textHyouji(){
            document.getElementById('new-gen_textPreview').innerHTML = "<p>"+document.getElementById('new-gen_textBox').value+"</p>"; 
