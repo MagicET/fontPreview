@@ -52,10 +52,16 @@
         function newGenTextUpdate(){
             newGenOutput.innerHTML = "<p>"+newGenInput.value+"</p>";
         }
+        const newGenTextUpdate = () => {
+             newGenTextUpdate();
+        }
         input.addEventListener('newGenInput', newGenTextUpdate);
         
         function cyberMonoTextUpdate(){
             cyberMonoOutput.innerHTML = "<p>"+cyberMonoInput.value+"</p>";
+        }
+        const cyberMonoTextUpdate = () => {
+             cyberMonoTextUpdate();
         }
         input.addEventListener('cyberMonoInput', cyberMonoTextUpdate);
         setInterval(newGenTextUpdate, 1);
