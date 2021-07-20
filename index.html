@@ -44,13 +44,19 @@
     
     <!-- JavaScript -->
     <script type="text/javascript">
-        function textHyouji(){
-           document.getElementById('new-gen_textPreview').innerHTML = "<p>"+document.getElementById('new-gen_textBox').value+"</p>"; 
-           document.getElementById('cyber-mono_textPreview').innerHTML = "<p>"+document.getElementById('cyber-mono_textBox').value+"</p>"; 
+        const newGenInput = document.getElementById('new-gen_textBox');
+        const cyberMonoInput = document.getElementById('cyber-mono_textBox');
+        const newGenOutput = document.getElementById('new-gen_textPreview');
+        const cyberMonoOutput = document.getElementById('cyber-mono_textPreview');
+        
+        function newGenTextUpdate(){
+            newGenOutput.innerHTML = "<p>"+newGenInput.value+"</p>";
         }
-        const textHyoujiFunc = () => {
-            textHyouji();
+        input.addEventListener('newGenInput', newGenTextUpdate);
+        
+        function cyberMonoTextUpdate(){
+            cyberMonoOutput.innerHTML = "<p>"+cyberMonoInput.value+"</p>";
         }
-        setInterval(textHyoujiFunc, 1);
+        input.addEventListener('cyberMonoInput', cyberMonoTextUpdate);
     </script>
 
