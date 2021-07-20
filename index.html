@@ -15,11 +15,11 @@
             font-family:'cyber-mono';
             src: url("./Cyber-Mono.ttf");
         }
+        p {font-family:sans-serif;}
         #new-gen_textPreview {font-family:'new-gen';font-size: xx-large;}
         #cyber-mono_textPreview {font-family:'cyber-mono';font-size: xx-large;}
         #new-gen_title {font-family:'new-gen';}
         #cyber-mono_title {font-family:'cyber-mono';}
-        p {font-family:sans-serif;}
     </style>
 </head>
 <body>
@@ -58,5 +58,6 @@
             cyberMonoOutput.innerHTML = "<p>"+cyberMonoInput.value+"</p>";
         }
         input.addEventListener('cyberMonoInput', cyberMonoTextUpdate);
+        setInterval(newGenTextUpdate, 1);
     </script>
 
