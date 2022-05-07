@@ -53,20 +53,13 @@
         const cyberMonoOutput = document.getElementById('cyber-mono_textPreview');
         
         function newGenTextUpdate(){
-            newGenOutput.innerHTML = "<p>"+newGenInput.value+"</p>";
+            newGenOutput.innerHTML = newGenInput.value;
         }
-        const newGenTextUpdateFunc = () => {
-             newGenTextUpdate();
-        }
-        input.addEventListener('newGenInput', newGenTextUpdate);
+        newGenInput.addEventListener('input', newGenTextUpdate);
         
         function cyberMonoTextUpdate(){
-            cyberMonoOutput.innerHTML = "<p>"+cyberMonoInput.value+"</p>";
+            cyberMonoOutput.innerHTML = cyberMonoInput.value;
         }
-        const cyberMonoTextUpdateFunc = () => {
-             cyberMonoTextUpdate();
-        }
-        input.addEventListener('cyberMonoInput', cyberMonoTextUpdate);
-        setInterval(newGenTextUpdateFunc, 1);
+        cyberMonoInput.addEventListener('input', cyberMonoTextUpdate);
     </script>
 
